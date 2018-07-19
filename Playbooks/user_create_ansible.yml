@@ -1,0 +1,9 @@
+---
+#- hosts: all
+- hosts: rhel01
+  tasks:
+   - name: crear usuario ansible
+     user:
+       name=ansible
+       state=present
+       generate_ssh_key=yes
